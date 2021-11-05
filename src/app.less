@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+}
+
+
+
+.app{
+  margin: 0 auto;
+  padding: 30px 0;
+  max-width: 1440px;
+  display: flex;
+}
+.app__left{
+  flex-shrink: 0;
+}
+.app__tasks{
+  margin-left: 20px;
+}
+.app__popap-main{
+  margin-top: 10px;
+  background-color: #fff;
+  position: relative;
+}
+.app__close-popap{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+
+.form{
+  padding: 15px;
+  width: 350px;
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: column;
+}
+.form__title{
+  margin-bottom: 15px;
+  display: inline-block;
+}
+.form__name{
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.form__desc{
+  padding: 10px;
+  margin-bottom: 15px;
+  height: 100px;
+  resize: none;
+}
+.form__priority{
+  margin-bottom: 15px;
+}
+.form__save{
+  padding: 10px;
+}
+
+.priority{
+  display: flex;
+  flex-wrap: wrap;
+}
+.priority__btn{
+  @quantity: 3;
+  @margin: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  width: calc((100% - (2 * @margin)) / @quantity);
+  cursor: pointer;
+
+  &:not(:nth-child(3n)){
+    margin-right: 10px;
+  }
+}
+
+
+
+.tabs{
+  padding: 0 10px;
+}
+.tabs__list{
+  display: flex;
+  list-style: none;
+}
+.tabs__item{
+  padding: 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+
+  &--active{
+    background-color: grey;
+    cursor: inherit;
+  }
+}
+
+.tasks{
+  width: 100%;
+}
+.tasks__wrapper{
+  padding: 15px;
+  height: 100%;
+  border: 1px solid #000;
+}
+.tasks__list{
+  list-style: none;
+}
+.tasks__task{
+  &+&{
+    margin-top: 20px;
+  }
+}
+
+
+.task{
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+}
+.task__priority{
+  width: 25px;
+  border-right: 1px solid #000;
+  flex-shrink: 0;
+}
+.task__main{
+  padding: 15px;
+  width: 100%;
+}
+.task__top{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.task__status{
+  margin-right: 10px;
+}
+.task__handlers{
+  padding: 10px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.task__icon{
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+
+  img{
+    width: inherit;
+  }
+}
