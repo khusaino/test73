@@ -39,7 +39,6 @@ export default {
   },
   data() {
     return {
-      editTaskId: null,
       popapOpen: false,
     };
   },
@@ -61,10 +60,12 @@ export default {
       this.popapOpen = false
     },
     openFormEditableTask(id) {
+      // обрабатывает событие по клику на редактировние задачи в списке задач
       this.popapOpen = true;
       this.setIdOfEditableTask(id);
     },
     hadleEditTask(editedTask){
+      // обрабатывает событие по клику на "изменить задачу" в окне редактирования
       this.editTask(editedTask);
       this.setIdOfEditableTask(null);
       this.closePopap();
